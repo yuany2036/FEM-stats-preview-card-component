@@ -1,0 +1,170 @@
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: hsl(233, 47%, 7%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+main {
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.img {
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1,
+h2 {
+    color: hsl(0, 0%, 100%);
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+div:nth-of-type(3) h2,
+h3 {
+    text-transform: uppercase;
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 1.5rem;
+    line-height: 25px;
+
+}
+
+h3 {
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 1.5rem;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+}
+
+span {
+    color: hsl(277, 64%, 61%);
+}
+
+section>div {
+    display: flex;
+
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+}
+
+/* ____________mobile view_____________ */
+
+@media (max-width:375px) {
+    :root {
+        font-size: 0.5rem;
+    }
+
+    .img {
+        background: hsl(277, 64%, 61%, 0.9) url(./images/image-header-mobile.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 30%;
+        border-radius: 15px 15px 0 0;
+    }
+
+    main {
+        width: 90%;
+        height: 90vh;
+        flex-direction: column;
+        align-items: center;
+        /* background-color: aqua; */
+    }
+
+    section {
+        padding: 30px 30px 10px;
+        height: 60%;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+    h1, p{
+        flex-grow: 2;
+    }
+    section>div {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        flex-grow: 3;
+    }
+
+    h1,
+    p,
+    div>div {
+        text-align: center;
+    }
+}
+
+/* _____________desktop view_____________ */
+
+@media (min-width:376px) {
+    .img {
+        background: hsl(277, 64%, 61%, 0.9) url(./images/image-header-desktop.jpg);
+        width: 540px;
+        border-radius: 0 15px 15px 0;
+    }
+
+    main {
+        width: 1050px;
+        height: 446px;
+
+    }
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    section {
+        width: 560px;
+        padding: 60px 80px;
+    }
+
+    section>div {
+        justify-content: space-between;
+        padding-right: 30px;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+
+    }
+
+    p {
+        margin-bottom: auto;
+    }
+}
